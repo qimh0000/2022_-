@@ -1,0 +1,328 @@
+
+
+
+
+
+
+/*sponsor logo的共用屬性與路徑*/
+/*讓logo可以只有選到的是黑色的*/
+.sponsor {
+    position: absolute;
+    left: 2.25%;
+    top: 16%/*21.5%*/;   
+    width: 460px;
+    height: 500px;
+    z-index: 10;
+    display: flex;
+}
+
+
+/*各logo的設定與屬性*/
+#logo_01 {
+    width: 458.78px;
+    height: 30px;
+    position: absolute;
+    object-fit: contain;
+    object-position: 0px 0px;
+    filter: opacity(0.3);
+	cursor: pointer;
+    /*border: solid;
+    border-color: cyan;*/
+}
+#logo_01:hover {
+    filter: opacity(1);
+}
+
+#logo_02 {
+    width: 330.022px;
+    height: 40px;
+    position: absolute;
+    object-fit: contain;
+    object-position: 0px 0px;
+    top: 18vh;
+    filter: opacity(0.3);
+	cursor: pointer;
+    /*border: solid;
+    border-color: cyan;*/
+}
+#logo_02:hover {
+    filter: opacity(1);
+}
+
+#logo_03 {
+    width: 170.897px;
+    height: 43px;
+    position: absolute;
+    object-fit: contain;
+    object-position: 0px 0px;
+    top: 36vh;
+    filter: opacity(0.3);
+	cursor: pointer;
+    /*border: solid;
+    border-color: cyan;*/
+}
+#logo_03:hover {
+    filter: opacity(1);
+}
+
+#logo_04 {
+    width: 114.602px;
+    height: 40px;
+    position: absolute;
+    object-fit: contain;
+    object-position: 0px 0px;
+    top: 54vh;
+    filter: opacity(0.3);
+	cursor: pointer;
+    /*border: solid;
+    border-color: cyan;*/
+}
+#logo_04:hover {
+    filter: opacity(1);
+}
+
+
+/*intro的總設定與屬性*/
+.sponsor_intro {
+    width: 23%;
+    /*443.1px*/
+    height: 52.9%;
+    /*496.2px*/
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    text-align: justify;
+    z-index: 9;
+    color: #898989;
+    /*
+    border: solid;
+    border-color: cyan;*/
+}
+
+/*各intro的設定與屬性*/
+#intro_01 {
+    font-size: 1.1em/*1.375em*/;
+    line-height: 1.59em;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    transition: all 0.25s cubic-bezier(.57, -0.37, .23, .98);
+    z-index: 9;
+
+    /*visibility: hidden;  */
+}
+
+#intro_02 {
+    font-size: 1.1em/*1.375em*/;
+    line-height: 1.59em;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    transition: all 1s cubic-bezier(.57, -0.37, .23, .98) 0.5s;
+    z-index: 9;
+}
+
+#intro_03 {
+    font-size: 1.1em/*1.375em*/;
+    line-height: 1.59em;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    transition: all 1s cubic-bezier(.57, -0.37, .23, .98) 0.5s;
+    z-index: 9;
+}
+
+#intro_04 {
+    font-size: 1.1em /*1.375em*/;
+    line-height: 1.59em;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    transition: all 1s cubic-bezier(.57, -0.37, .23, .98) 0.5s;
+    z-index: 9;
+}
+
+.intro_web {
+    width: 100%;
+    position: absolute;
+    right: 0%;
+    color: #898989;
+    text-align: right;
+}
+
+/*定義連結的格式*/
+.intro_web a{
+    vertical-align: 0%;
+    text-decoration: none;  
+    /*text-decoration-thickness: 3%;*/
+    color: #898989;   
+    /*animation: reveal 2.5s ease-out 1.5s;*/
+}
+
+/*)))動態*/
+
+.intro_web span:nth-child(1){
+    animation: rippling_01 2s ease-out 1s infinite;
+}
+
+.intro_web span:nth-child(2){
+    animation: rippling_02 2s ease-out 1s infinite;
+}
+
+.intro_web span:nth-child(3){
+    animation: rippling_03 2s ease-out 1s infinite;
+}
+
+@keyframes rippling_01{
+    0%{
+        margin-right: 3vw;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        margin-right:0;
+        opacity: 1;
+    }
+}
+
+@keyframes rippling_02{
+    0%{
+        margin-right: 2vw;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes rippling_03{
+    0%{
+        margin-right: 1vw;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes reveal{
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/*第一個logo的兩個圓圈預設的形式，沒編號是大園，有編號是小圓*/
+.sponsor_Shape {
+    display: flex;
+    list-style: none;
+    position: fixed;
+    justify-content: center;
+    align-items: end;
+    margin-left: auto;
+    background: #FAFAFA;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(1% at -10% 50%);
+    /*-webkit-clip-path: circle(1% at -10% 50%);*/
+    transition: clip-path 1s cubic-bezier(.34, .33, .44, .99);
+    z-index: 1;
+}
+
+.sponsor_Shape_2 {
+    display: flex;
+    list-style: none;
+    position: fixed;
+    justify-content: center;
+    align-items: end;
+    margin-left: auto;
+    background: #f5f5f5;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(1% at -10% 50%);
+    /*-webkit-clip-path: circle(1% at -10% 50%);*/
+    transition: clip-path 1.2s cubic-bezier(.34, .33, .44, .99);
+    z-index: 2;
+}
+
+/*第一個logo的兩個圓圈打開時的屬性*/
+.sponsor_Shape_2.open {
+    clip-path: circle(124% at -10% 50%);
+    /*-webkit-clip-path: circle(124% at -10% 50%);*/
+    z-index: 2;
+}
+
+.sponsor_Shape.open {
+    clip-path: circle(127% at -10% 50%);
+    /*-webkit-clip-path: circle(127% at -10% 50%);*/
+    z-index: 1;
+    /*毛玻璃ㄉ*/
+    /*backdrop-filter: blur(50px);
+	opacity:0.5;*/
+}
+
+/*web link ))) class*/
+.web_link_01 {
+    text-transform: uppercase;
+}
+.web_link_01 .letter {
+    text-transform: uppercase;
+}
+
+.web_link_02 {
+    text-transform: uppercase;
+}
+.web_link_02 .letter {
+    text-transform: uppercase;
+}
+
+.web_link_03 {
+    text-transform: uppercase;
+}
+.web_link_03 .letter {
+    text-transform: uppercase;
+}
+
+.web_link_04 {
+    text-transform: uppercase;
+}
+.web_link_04 .letter {
+    text-transform: uppercase;
+}
+
+@media(max-width:1024px){
+	.sponsor{
+		width: 65vw;
+		left: 3.5%;
+	}
+	
+	#intro_01,#intro_02,#intro_03,#intro_04{
+		display: none;
+	}
+	
+	#logo_01{
+		width: 135%;
+		margin-left: 2.25%;
+		margin-top: 5%;
+	}
+}
+

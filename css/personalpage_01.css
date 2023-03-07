@@ -1,0 +1,290 @@
+@charset "utf-8";
+/* CSS Document */
+
+.personalbox{
+  display: block;
+  position:absolute;
+  width: 95.5vw;
+  height: 80vh;
+  top:15vh;
+  right: 0;
+  left: 2.25%;
+  justify-content: center;
+  overflow: auto;
+  z-index: 12;
+  /*background-color: aqua;*/
+}
+
+.column_right {
+  display: flex;
+  position: fixed;
+  right: 2.25%;
+  width: 30vw;
+  min-height: 80vh;
+  z-index: 20;
+  background-color: hsla(0,0%,100%,0.68);
+}
+
+.column_left {
+  /*background: #666;*/
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: 50vw;
+  min-height: 100%;
+  overflow: scroll; 
+  float: left;
+  z-index: 10;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
+.btn_back{
+	display:block;
+	position: absolute;
+	left: 2.25%;
+	top:10%;
+	width:auto;
+	height: auto;
+	z-index: 8;
+}
+
+.btn_back a{
+	text-decoration: none;
+	color: #898989;
+}
+
+.btn_back a:hover{
+	color: #000;
+}
+
+.btn_back_big{
+	height: auto;
+	font-size: 1em;
+	/*background-color: #FF8587;*/
+}
+
+.btn_back_small{
+	height: auto;
+	font-size: 0.9em;
+	/*background-color: #FF8587;*/
+}
+
+
+.worktitle_ch{
+	display:block;
+	position: fixed;
+	width: auto;
+	height: auto;
+	margin: 0 2% 2% 0;
+	font-size: 2.25em;
+	letter-spacing: 0.05em;
+	color:#898989;
+	/*background-color: #C1FFBD;*/
+}
+
+.worktitle_en{
+	display:block;
+	position: fixed;
+	width: auto;
+	height: auto;
+	margin: 3% 2% 2% 0;
+	font-size: 2.25em;
+	letter-spacing: 0.01em;
+	color:#898989;
+	/*background-color:#82CEFD;*/
+}
+
+.workinfo_tag{
+	display: block;
+	position: absolute;
+	right: 0;
+	top:25%;
+	width: auto;
+	height:auto;
+	color:#898989;
+	/*background-color: #FFBC87;*/
+}
+
+.workinfo_time{
+	display: block;
+	position: absolute;
+	right: 0;
+	top:30%;
+	width: auto;
+	height:auto;
+	color:#898989;
+	/*background-color: #94C3FF;*/
+}
+
+.headshot{
+	display: block;
+	position: absolute;
+	right: 0;
+	top:45%;
+	width: 32.5%;
+	height:auto;
+}
+
+.headshot img{
+	width: 100%;
+}
+
+.name_01{
+	display: block;
+	position: absolute;
+	left:0;
+	top: 60%;
+	width: auto;
+	height:auto;
+	color:#898989;
+	/*background-color: #C892FF;*/
+}
+
+.name_02{
+	display: block;
+	position: absolute;
+	left:35%;
+	top: 65%;
+	width: auto;
+	height:auto;
+	color:#898989;
+	/*background-color: #C892FF;*/
+}
+
+.name_03{
+	display: block;
+	position: absolute;
+	right:0;
+	top: 73%;
+	width:32.8%;
+	height:auto;
+	color:#898989;
+	/*background-color: #C892FF;*/
+}
+
+.name_03_L{
+	display: block;
+	position: absolute;
+	left:0;
+	width: auto;
+	height:auto;
+	color:#898989;
+	/*background-color: #96F3BF;*/
+}
+
+.name_03_R{
+	display: block;
+	position: absolute;
+	top:185%;
+	right:0;
+	width:auto;
+	height:auto;
+	color:#898989;
+	/*background-color: #96F3BF;*/
+}
+
+.personal_link{
+	display: block;
+	position: absolute;
+	left:0;
+	bottom: 0;
+	width:100%;
+	color:#898989;
+	/*height:auto;*/
+	/*background-color: #FFF695;*/
+}
+
+.personal_link_L{
+	display: block;
+	position: absolute;
+	left:0;
+	bottom: 0;
+	width:auto;
+	color:#898989;
+	/*height:auto;*/
+	/*background-color: #6688FF;*/
+}
+
+
+.personal_link_R{
+	display: block;
+	position: absolute;
+	right:0;
+	bottom: 0;
+	width:auto;
+	height:auto;
+	color:#898989;
+	/*background-color: #FFF695;*/
+}
+
+.personal_link_R a:hover{
+	filter: blur(1px);
+}
+
+.workinfo{
+	height: 100%;
+	overflow: auto;
+	float: left;
+}
+
+.workinfo img{
+	display: block;
+	margin: 0 3% 1.5% 0;
+	width: 100%;
+	/*border: solid;*/
+}
+
+.workinfo p{
+	display: block;
+	margin: 0 3% 2% 0;
+	width: 100%;
+	font-size:0.9em;
+	letter-spacing: 0.05em;
+	line-height: 1.5em;
+	color: #898989;
+	/*border: solid;*/
+}
+
+.workinfo span{
+	display: block;
+	margin: 3.5% 3% 3% 0;
+	width: 100%;
+	font-size:0.9em;
+	color: #898989;
+	/*border: solid;*/
+}
+
+@media(max-width:1024px){
+	.column_right {
+		display: inline-block;
+		position: relative;
+		right: 0;
+		left: 0;
+		width: 95.5vw;
+	}
+	
+	.column_left {
+		display: inline-block;
+		position: relative;
+		right: 0;
+		left: 0;
+		width: 95.5vw;
+		margin-top: 8%;
+	}
+	
+	.worktitle_ch{
+		display:inline-block;
+		position: relative;
+}
+	
+	.worktitle_en{
+		display:inline-block;
+		position: relative;
+		margin: 2% 2% 2% 0;
+}
+
+
+}

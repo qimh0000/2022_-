@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrapper{
+	position:relative;
+	width: 95.5%;
+	height: auto;
+	top:10.5vh;
+    left: 2.25%;
+	padding-bottom: 17vh;
+}
+
+.intro_01{
+	width: 94.5vw;
+}
+
+
+.intro_01 img,.intro_02 img,.intro_03 img
+,.intro_04 img,.intro_05 img{
+	width: 100%;
+}
+
+.intro_text{
+	position: relative;
+	width: 94.5vw;
+	height: 60vh;
+	/*background-color: #444;*/
+	padding-top: 8%;
+	padding-bottom: 30%;
+}
+
+.intro_03{
+	display: block;
+	position: absolute;
+	width: 7.5%;
+	/*background-color: aquamarine;*/
+}
+
+.intro_04{
+	display: block;
+	position: absolute;
+	width: 35%;
+	left: 20.5%;
+	justify-content: center;
+	/*background-color: #FFF3B4;*/
+}
+
+.intro_05{
+	position: absolute;
+	display: block;
+	width: 41.5%;
+	right: 0;
+	/*background-color: #57A9FF;*/
+}
+
+@media(max-width:1024px){
+	.intro_01,.intro_02{
+		display: none;
+	}
+	
+	.intro_text{
+		height: auto;
+	}
+	
+	.intro_03,.intro_04,.intro_05{
+		position: relative;
+	}
+	
+	.intro_03{
+	display: inline-block;
+	width: 24%;
+	/*background-color: aquamarine;*/
+	}
+	
+	.intro_04{
+	display: inline-block;
+	width: 100%;
+	left: 0;
+	top:24%;
+	/*background-color: aquamarine;*/
+	}
+	
+	.intro_05{
+	display: inline-block;
+	width: 100%;
+	left: 0;
+	top:120%;
+	/*background-color: aquamarine;*/
+	}
+}

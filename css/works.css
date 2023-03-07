@@ -1,0 +1,802 @@
+:root {
+  --row_add_space: 33vw;
+  --colmn-01: 0%;
+  --colmn-02: 25.3%;
+  --colmn-03: 50.6%;
+  --colmn-04: 75.9%;
+}
+
+.category {
+  display: block;
+  position: absolute;
+  left: 2.25%;
+  top: 9%;
+  width: 50vw;
+  height: 14vh;
+  /*background-color: aquamarine;*/
+
+}
+
+
+.category input[type=text] {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+   border-bottom-style: hidden;
+  background-color: transparent;
+  padding: 3px;
+  font-size: 1em;
+  font-family: myfont; 
+  color: #898989;
+  width: 10%;
+  transition: width 0.4s ease-in-out;
+  /*border-bottom-style: groove;*/
+
+}
+
+input[type=text]:focus {
+  border-bottom-style: groove;
+  outline: none;
+  width: 100%;
+}
+
+
+#search_icon {
+  position: absolute;
+  top: 3%;
+  width: 15px;
+  height: 15px;
+}
+
+.search_title {
+  font-size: 1.1em;
+
+}
+
+.search_area {
+  position: absolute;
+  left: 20%;
+  top: 3%;
+}
+
+.tag_buttons {
+  position: absolute;
+  top: 28%;
+  width: 50vw;
+  height: 72%;
+  background-color: transparent;
+  /*red*/
+
+}
+
+.B_row_2 {
+  position: absolute;
+  top: 30%;
+}
+
+.buttons {
+  font-size: 1em;
+  align-items: center;
+  appearance: none;
+  background-color: transparent;
+  font-weight: 400;
+  color: #898989;
+  border-radius: 20px;
+  padding: 0px 2px;
+  border-style: none;
+  width: auto;
+}
+
+.buttons:hover {
+  color: black;
+  background-color: transparent;
+}
+
+.buttons.active {
+  color: black;
+}
+
+
+.classmate {
+  position: absolute;
+  width: 95.5vw;/*董96.95vw*/
+  /*
+  同學區(以1920*1080去算)
+  總高11929.596px + 84px {區塊(478.076)+間隔(90) * 21(4人一排) = 11929.596} + 84(離底部距離)
+  最終總高12013.596
+  區塊+間隔 = 568.076px
+  */
+  height:calc(var(--row_add_space) * 20.2);
+  /*1240%;*/
+  left: 2.25%;
+  top: 25%;
+  bottom: 15%;
+  z-index: 1;
+}
+
+body {
+  color: #898989;
+  /*4px原本慧琳用的*/
+}
+
+/* Center website */
+.main {
+  max-width: 1500px;
+  margin: auto;
+  z-index: 2;
+
+}
+
+.wrapper {
+  height: 4.95%;
+  width: 25%;
+  float: left;
+  /*
+  border: solid;
+  border-color: blue;
+  border-width: 0.1px;
+*/
+}
+
+/* Create four equal rows that floats next to each other */
+.row {
+  position: relative;
+  width: 22.63vw;
+  /*原始px高 478.076px*/
+  height:100%;
+  /*
+  border: solid;
+  border-color: blue;
+  border-width: 0.5px;
+*/
+  object-fit: contain;
+  z-index: 2;
+}
+
+.row img {
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 2;
+}
+
+.photo {
+  position: relative;
+  width: 100%;
+  height: 21vw;
+  z-index: 19;
+
+  /*
+  border: solid;
+*/
+}
+.photo img{
+	  filter: blur(1px);
+	  opacity: 0.8;
+	}
+
+.photo img:hover{
+	filter: blur(0);
+	opacity: 1;
+}
+
+/*
+.img-front:hover {
+  opacity: 0;
+  cursor: pointer;
+}
+*/
+/*
+.names {
+  position: absolute;
+  width: 100%;
+  height: 9%;
+  bottom: 0%;
+  left: 0%;
+}
+*/
+.left_brackets {
+  position: absolute;
+  font-size: 0.9em;/*原本都1*/
+  /*top: 0;*/
+  top: 115%;
+  left: 0%;
+  line-height: 1em;
+  font-weight: 400;
+  z-index: 20;
+}
+
+.work_name {
+  font-size: 0.9em;
+  position: absolute;
+  /*top: 0;*/
+  top: 115%;
+  right: 0%;
+  line-height: 1em;
+  font-weight: 400;
+  z-index: 20;
+}
+
+.designer_left {
+  font-size: 0.9em;
+  position: absolute;
+  /* bottom: 0%;*/
+  left: 0%;
+  top: 121%;/*120.5%*/
+  line-height: 1em;
+}
+
+.designer_right {
+  font-size: 0.9em;
+  position: absolute;
+  top: 121%;/*120.5%*/
+  right: 0%;
+  line-height: 1em;
+}
+
+.tags {
+  position: absolute;
+  left: 0%;
+  top: 126%;
+  font-size: 0.9em;
+}
+
+/*
+#person_01 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: 0%;
+}
+
+#person_02 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: 0%;
+  z-index: 2;
+}
+
+#person_03 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: 0%;
+  z-index: 2;
+}
+
+#person_04 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: 0%;
+}
+
+#person_05 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 1);
+}
+
+#person_06 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 1);
+}
+
+#person_07 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 1);
+}
+
+#person_08 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 1);
+}
+
+#person_09 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 2);
+}
+
+#person_10 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 2);
+}
+
+#person_11 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 2);
+}
+
+#person_12 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 2);
+}
+
+#person_13 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 3);
+}
+
+#person_14 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 3);
+}
+
+#person_15 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 3);
+}
+
+#person_16 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 3);
+}
+
+#person_17 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 4);
+}
+
+#person_18 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 4);
+}
+
+#person_19 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 4);
+}
+
+#person_20 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 4);
+}
+
+#person_21 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 5);
+}
+
+#person_22 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 5);
+}
+
+#person_23 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 5);
+}
+
+#person_24 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 5);
+}
+
+#person_25 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 6);
+}
+
+#person_26 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 6);
+}
+
+#person_27 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 6);
+}
+
+#person_28 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 6);
+}
+
+#person_29 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 7);
+}
+
+#person_30 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 7);
+}
+
+#person_31 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 7);
+}
+
+#person_32 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 7);
+}
+
+#person_33 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 8);
+}
+
+#person_34 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 8);
+}
+
+#person_35 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 8);
+}
+
+#person_36 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 8);
+}
+
+#person_37 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 9);
+}
+
+#person_38 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 9);
+}
+
+#person_39 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 9);
+}
+
+#person_40 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 9);
+}
+
+#person_41 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 10);
+}
+
+#person_42 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 10);
+}
+
+#person_43 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 10);
+}
+
+#person_44 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 10);
+}
+
+#person_45 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 11);
+}
+
+#person_46 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 11);
+}
+
+#person_47 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 11);
+}
+
+#person_48 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 11);
+}
+
+#person_49 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 12);
+}
+
+#person_50 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 12);
+}
+
+#person_51 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 12);
+}
+
+#person_52 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 12);
+}
+
+#person_53 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 13);
+}
+
+#person_54 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 13);
+}
+
+#person_55 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 13);
+}
+
+#person_56 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 13);
+}
+
+#person_57 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 14);
+}
+
+#person_58 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 14);
+}
+
+#person_59 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 14);
+}
+
+#person_60 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 14);
+}
+
+#person_61 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 15);
+}
+
+#person_62 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 15);
+}
+
+#person_63 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 15);
+}
+
+#person_64 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 15);
+}
+
+#person_65 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 16);
+}
+
+#person_66 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 16);
+}
+
+#person_67 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 16);
+}
+
+#person_68 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 16);
+}
+
+#person_69 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 17);
+}
+
+#person_70 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 17);
+}
+
+#person_71 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 17);
+}
+
+#person_72 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 17);
+}
+
+#person_73 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 18);
+}
+
+#person_74 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 18);
+}
+
+#person_75 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 18);
+}
+
+#person_76 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 18);
+}
+
+#person_77 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 19);
+}
+
+#person_78 {
+  position: absolute;
+  left: var(--colmn-02);
+  top: calc(var(--row_add_space) * 19);
+}
+
+#person_79 {
+  position: absolute;
+  left: var(--colmn-03);
+  top: calc(var(--row_add_space) * 19);
+}
+
+#person_80 {
+  position: absolute;
+  left: var(--colmn-04);
+  top: calc(var(--row_add_space) * 19);
+}
+
+#person_81 {
+  position: absolute;
+  left: var(--colmn-01);
+  top: calc(var(--row_add_space) * 20);
+}
+*/
+
+/* Content */
+
+	
+@media(max-width:1024px){
+	
+	.category{
+		display: none;
+	}
+	
+	
+	.classmate{
+		position: relative;
+		top:15vh;
+	}
+	
+	.left_brackets,.work_name,.designer_left,.designer_right,.tags{
+		display: none;
+	}
+	
+	.photo img{
+	  filter: blur(0);
+	  opacity: 0.8;
+	}
+}
+
+/*這不能用..*/
+/* Responsive layout - makes a two row-layout instead of four rows */
+/*@media screen and (max-width: 360px) {
+  .row {
+    width: 200%;
+	}
+}
+
+/* Responsive layout - makes the two rows stack on top of each other instead of next to each other */
+/*@media screen and (max-width: 350px) {
+  .row {
+    width: 100%;
+  }
+}*/
+
+
+
+/*backtotop*/
+.back-to-top {
+	display: none; /* 默認隱藏一開始不顯示 */
+	position: fixed;
+	bottom: 2%;
+	right: 2.25%;
+	width: 8vh;
+	height:8vh;
+	z-index: 1000;
+	border:none;
+	outline: none; /* 不顯示外框 */
+	background-color:hsla(0,0%,100%,0.5);
+	color: #898989;
+	cursor: pointer;
+	border-radius: 1000em; /* 增加圓角 */
+}
+
+.back-to-top:hover {
+	background-color:hsla(0,0%,0%,0.02);
+	color: #000;
+}

@@ -1,0 +1,280 @@
+@charset "utf-8";
+/* CSS Document */
+
+.personalbox{
+  display: block;
+  position:absolute;
+  width: 95.5vw;
+  height: 80vh;
+  top:15vh;
+  right: 0;
+  left: 2.25%;
+  justify-content: center;
+  overflow: auto;
+  z-index: 12;
+  /*background-color: aqua;*/
+}
+
+.column_right {
+  display: flex;
+  position: fixed;
+  right: 2.25%;
+  width: 30vw;
+  min-height: 80vh;
+  z-index: 20;
+  background-color: hsla(0,0%,100%,0.68);
+}
+
+.column_left {
+  /*background: #666;*/
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: 50vw;
+  min-height: 100%;
+  overflow: scroll; 
+  float: left;
+  z-index: 10;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
+.btn_back{
+	display:block;
+	position: absolute;
+	left: 2.25%;
+	top:10%;
+	width:auto;
+	height: auto;
+	z-index: 8;
+}
+
+.btn_back a{
+	text-decoration: none;
+	color: #898989;
+}
+
+.btn_back a:hover{
+	color: #000;
+}
+
+.btn_back_big{
+	height: auto;
+	font-size: 1em;
+	/*background-color: #FF8587;*/
+}
+
+.btn_back_small{
+	height: auto;
+	font-size: 0.9em;
+	/*background-color: #FF8587;*/
+}
+
+
+.product_ch{
+	display:block;
+	position: fixed;
+	width: auto;
+	height: auto;
+	margin: 0 2% 2% 0;
+	font-size: 2.25em;
+	letter-spacing: 0.05em;
+	color:#898989;
+	/*background-color: #C1FFBD;*/
+}
+
+.product_en{
+	display:block;
+	position: fixed;
+	width: auto;
+	height: auto;
+	margin: 3% 2% 2% 0;
+	font-size: 2.25em;
+	letter-spacing: 0.01em;
+	color:#898989;
+	/*background-color:#82CEFD;*/
+}
+
+.price{
+	display: block;
+	position: absolute;
+	left: 0;
+	top:18%;/*24*/
+	width: auto;
+	height:auto;
+	color:#898989;
+	font-size: 1.45em;
+	/*background-color: #FFBC87;*/
+}
+
+.product_detail{
+	display: block;
+	position: absolute;
+	left: 0;
+	top:32%;
+	font-size: 1em;
+	/*background-color: hsla(359,100%,88%,1.00);*/
+}
+
+.product_detail a:hover{
+	filter: blur(1px);
+}
+
+.thumbnail{
+	display: block;
+	position: absolute;
+	right: 0;
+	top:50%;
+	width: 32.5%;
+	height:auto;
+	/*background-color: antiquewhite;*/
+}
+
+.thumbnail img{
+	width: 100%;
+}
+
+.size_01{
+	display: block;
+	position: absolute;
+	left:0;
+	top: 71%;
+	width: auto;
+	height:auto;
+	color:#898989;
+	/*background-color: #C892FF;*/
+}
+
+.size_02{
+	display: block;
+	position: absolute;
+	left:24%;
+	top: 78%;
+	width: auto;
+	height:auto;
+	color:#898989;
+	/*background-color: #C892FF;*/
+}
+
+.size_03{
+	display: block;
+	position: absolute;
+	top:85%;
+	right:0;
+	width:auto;
+	height:auto;
+	color:#898989;
+	/*background-color: #96F3BF;*/
+}
+
+.order_link{
+	display: block;
+	position: absolute;
+	left:0;
+	bottom: 0;
+	width:100%;
+	/*height:auto;*/
+	/*background-color: #FFF695;*/
+}
+
+.order_link_L{
+	display: block;
+	position: absolute;
+	left:0;
+	bottom: 0;
+	font-size: 1.5em;
+	width:auto;
+	/*height:auto;*/
+}
+
+
+.order_link_R{
+	display: block;
+	position: absolute;
+	right:0;
+	bottom: 0;
+	font-size: 1.5em;
+	width:auto;
+	height:auto;
+	/*background-color: #FFF695;*/
+}
+
+.order_link_R a:hover{
+	filter: blur(1px);
+}
+
+.productinfo{
+	height: 100%;
+	overflow: auto;
+	float: left;
+}
+
+.productinfo img{
+	display: block;
+	margin: 0 3% 1.5% 0;
+	width: 100%;
+	/*border: solid;*/
+}
+
+.productinfo p{
+	display: block;
+	margin: 0 3% 2% 0;
+	width: 100%;
+	font-size:0.9em;
+	letter-spacing: 0.03em;
+	line-height: 1.5em;
+	color: #898989;
+	/*border: solid;*/
+}
+
+.productinfo span{
+	display: block;
+	margin: 3.5% 3% 3% 0;
+	width: 100%;
+	font-size:0.9em;
+	letter-spacing: 0.03em;
+	color: #898989;
+	/*border: solid;*/
+}
+
+.gif img{
+	display: block;
+	width: 100%;
+	/*background: hsla(236,97%,69%,1.00);*/
+}
+
+@media(max-width:1024px){
+	.column_right {
+		display: inline-block;
+		position: relative;
+		right: 0;
+		left: 0;
+		width: 95.5vw;
+	}
+	
+	.column_left {
+		display: inline-block;
+		position: relative;
+		right: 0;
+		left: 0;
+		width: 95.5vw;
+		margin-top: 8%;
+	}
+	
+	.product_ch{
+		display:inline-block;
+		position: relative;
+		margin-top: 11%;
+		
+}
+	
+	.product_en{
+		display:none;
+		position: relative;
+		margin: 2% 2% 2% 0;
+}
+
+
+}
